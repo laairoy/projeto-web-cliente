@@ -1,0 +1,42 @@
+body {
+  background: #eaeaea;
+}
+#cabecalho {
+  background: #f8f8f8;
+  padding: 0;
+}
+
+#menu {
+  margin: 0;
+  padding-top: 40px;
+}
+#menu a {
+  color: black;
+}
+
+#menu a:hover {
+  background: #77cc6d;
+  color: white;
+}
+
+.active {
+  background: #77cc6d;
+  color: white;
+}
+
+#conteudo {
+  background: white;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.margem {
+  padding: 0px 40px;
+}
+
+.img-banner {
+  width: 100%;
+  height: auto;
+}
