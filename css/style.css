@@ -48,3 +48,49 @@ img {
   width: 100%;
   height: auto;
 }
+#noticias {
+  padding-top: 40px;
+}
+#noticias h4,
+#noticias p {
+  padding-top: 15px;
+  margin: 0;
+  text-align: center;
+}
+#galeria {
+  padding-top: 60px;
+}
+#galeria h2,
+#galeria p {
+  text-align: center;
+}
+
+.rodape-destaque {
+  color: #7ace67;
+}
+#rodape {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background: #27313d;
+}
+#rodape hr {
+  margin: 5px 0px;
+  color: #3e4041;
+  height: 2px;
+}
+#rodape a {
+  color: white;
+  text-decoration: none;
+}
+#rodape h4 {
+  color: white;
+}
+
+#rodape-separador {
+  padding-top: 40px;
+}
+#rodape-separador hr {
+  margin: 0;
+  color: #ccced1;
+  height: 5px;
+}
