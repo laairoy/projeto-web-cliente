@@ -1,11 +1,17 @@
 body {
   background: #eaeaea;
 }
+
 #cabecalho {
-  background: #f8f8f8;
-  padding: 0;
+  padding-top: 15px;
 }
 
+#cabecalho hr {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #77cc6d;
+  height: 5px;
+}
 #menu {
   margin: 0;
   padding-top: 40px;
@@ -18,14 +24,13 @@ body {
   background: #77cc6d;
   color: white;
 }
-
+.titulo {
+  font-weight: normal;
+  color: #555555;
+}
 .active {
   background: #77cc6d;
   color: white;
-}
-
-#conteudo {
-  background: white;
 }
 
 .no-padding {
@@ -36,7 +41,10 @@ body {
   padding: 0px 40px;
 }
 
-.img-banner {
+.bg-white {
+  background: white;
+}
+img {
   width: 100%;
   height: auto;
 }
