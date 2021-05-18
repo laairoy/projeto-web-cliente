@@ -241,7 +241,7 @@
         info: "ola mundo",
       });
       listProd.push({
-        id: "prod3",
+        id: "prod4",
         nome: "Tenis nike 4",
         img: "images/produto4.jpeg",
         preco: 220.0,
@@ -271,16 +271,22 @@
       }
       function comprar(id){
         console.log(id);
-        var data = localStorage.getItem(id);
-        if(data){
+        var data; 
+        if(localStorage.getItem(id)){
+          data = JSON.parse(localStorage.getItem(id));
           data.qtd++;
         } else {
+          prodTemp = listProd.find(item => item.id == id);
           data = {
-            qtd: 0,
-            produto: listProd.find(item => item.id == id)
+            qtd: 1,
+            nome: prodTemp.nome,
+            preco: prodTemp.preco,
+            img: prodTemp.img
           };
         } 
-        localStorage.setItem(id, data);
+        localStorage.setItem(id, JSON.stringify(data));
+
+        console.log(JSON.parse(localStorage.getItem(id)));
 
       }
     </script>
