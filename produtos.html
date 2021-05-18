@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Cliente</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <!-- cabecalho -->
+    <div id="cabecalho" class="container">
+      <div class="container no-padding line-top"></div>
+      <div class="container bg-light no-padding" style="padding-top: 30px">
+        <nav class="navbar navbar-light">
+          <div class="container-fluid no-padding margem">
+            <a class="navbar-brand"><h2 class="titulo">Web-Cliente</h2></a>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder=""
+                aria-label="Search"
+              />
+              <button class="btn btn-success btn-color" type="submit">
+                Pesquisar
+              </button>
+            </form>
+          </div>
+          <p class="margem" style="color: #a1a1a1">
+            Universidade Tecnológica Federal do Paraná
+          </p>
+        </nav>
+        <!-- //navbar -->
+        <nav id="menu" class="navbar navbar-expand-lg navbar-light margem">
+          <div class="container-fluid" style="padding: 0; background: white">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link active" href="produtos.html">Produtos</a>
+                <a class="nav-link" href="contato.html">Contatos</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- //navbar -->
+      </div>
+    </div>
+    <!-- //cabecalho -->
+    <!-- produtos -->
+    <div class="container">
+      <div class="container-fluid margem no-padding bg-white">
+        <div id="listaProdutos" class="row">
+          <!--item-->
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center" style="width: 18rem">
+              <img class="card-img-top" src="images/produto1.jpeg" />
+              <div class="card-body">
+                <h5 class="card-title">Tênis Nike</h5>
+                <a href="#" class="btn btn-primary">Mais Informações</a>
+              </div>
+            </div>
+          </div>
+          <!--//item-->
+        </div>
+      </div>
+      <!-- Modal -->
+        <div
+          class="modal fade"
+          id="prodModal"
+          tabindex="-1"
+          aria-labelledby="modalID"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalID">Produto X</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+                <div>
+                  <img id="modal-img" class="w-50"src="images/produto1.jpeg">
+                </div>
+              <div id="modal-descricao" class="modal-body">Descrição do produto...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button 
+                  id="modal-btn" 
+                  value="123" 
+                  type="button" 
+                  class="btn btn-primary"
+                  onclick="comprar(this.value)" 
+                  data-bs-dismiss="modal">Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //modal -->
+    </div>
+    <!-- //produtos -->
+    <div class="container">
+      <div id="rodape-separador" class="container bg-white no-padding">
+        <div class="container no-padding line-bottom"></div>
+      </div>
+      <div id="rodape" class="container margem no-padding">
+        <div class="row qx-5">
+          <div class="col">
+            <div>
+              <div>
+                <h4 style="margin-bottom: 0">Categorias</h4>
+                <div class="line-top"></div>
+              </div>
+              <a href="">Categoria 1</a>
+              <hr />
+              <a href="">Categoria 2</a>
+              <hr />
+              <a href="">Categoria 3</a>
+              <hr />
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <div>
+                <h4 style="margin-bottom: 0">Posts Recentes</h4>
+                <div class="line-top"></div>
+              </div>
+              <a href="">Categoria 1</a>
+              <hr />
+              <a href="">Categoria 2</a>
+              <hr />
+              <a href="">Categoria 3</a>
+              <hr />
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <div>
+                <h4 style="margin-bottom: 0">Contatos</h4>
+                <div class="line-top"></div>
+              </div>
+              <a href="">Informação 1</a>
+              <hr />
+              <a href="">Informação 2</a>
+              <hr />
+              <a href="">Informação 3</a>
+              <hr />
+              <a href="">Informação 4</a>
+              <hr />
+              <a href="">Informação 5</a>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container no-padding line-top"></div>
+      <nav id="rodape-bot" class="navbar navbar-light bg-light margem">
+        <div class="navbar ms-auto">
+          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="#">Suporte</a>
+          <a class="nav-link" href="contato.html">Contatos</a>
+        </div>
+      </nav>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+
+      // configuracoes de produtos
+      var listProd = [];
+      listProd.push({
+        id: "prod1",
+        nome: "Tenis nike 1",
+        img: "images/produto1.jpeg",
+        preco: 220.0,
+        info: "ola mundo",
+      });
+      listProd.push({
+        id: "prod2",
+        nome: "Tenis nike 2",
+        img: "images/produto2.jpeg",
+        preco: 220.0,
+        info: "ola mundo",
+      });
+      listProd.push({
+        id: "prod3",
+        nome: "Tenis nike 3",
+        img: "images/produto3.jpeg",
+        preco: 220.0,
+        info: "ola mundo",
+      });
+      listProd.push({
+        id: "prod3",
+        nome: "Tenis nike 4",
+        img: "images/produto4.jpeg",
+        preco: 220.0,
+        info: "ola mundo",
+      });
+
+      var div = document.getElementById("listaProdutos");
+      var data = "";
+      for (var i = 0; i < listProd.length; i++) {
+        data +=
+          "<!--item--> <div class='col-md-3 col-sm-6'><div class='card text-center' style='width: 18rem'><img class='card-img-top' src='" +
+          listProd[i].img +
+          "' /><div class='card-body'><h5 class='card-title'>" +
+          listProd[i].nome +
+          "</h5><a id='"+listProd[i].id +"'class='btn btn-primary' data-bs-toggle='modal'data-bs-target='#prodModal' onclick='openModal(this.id)'>Mais Informações</a></div></div></div><!--//item-->";
+      }
+      div.innerHTML = data;
+      function openModal(id){
+              prodData = listProd.find(produto => produto.id == id);
+              console.log(prodData);
+              var titulo = document.getElementById("modalID");
+              var descricao = document.getElementById("modal-descricao");
+              var botao = document.getElementById("modal-btn").value = prodData.id;
+              document.getElementById("modal-img").src = prodData.img;
+              titulo.innerHTML = prodData.nome;
+              descricao.innerHTML = prodData.info;
+      }
+      function comprar(id){
+        console.log(id);
+        var data = localStorage.getItem(id);
+        if(data){
+          data.qtd++;
+        } else {
+          data = {
+            qtd: 0,
+            produto: listProd.find(item => item.id == id)
+          };
+        } 
+        localStorage.setItem(id, data);
+
+      }
+    </script>
+  </body>
+</html>
