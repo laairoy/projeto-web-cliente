@@ -14,10 +14,8 @@
   <body>
     <!-- cabecalho -->
     <div id="cabecalho" class="container">
-      <div class="container bg-light no-padding">
-        <div class="container no-padding">
-          <hr />
-        </div>
+      <div class="container no-padding line-top"></div>
+      <div class="container bg-light no-padding" style="padding-top: 30px">
         <nav class="navbar navbar-light">
           <div class="container-fluid no-padding margem">
             <a class="navbar-brand"><h2 class="titulo">Web-Cliente</h2></a>
@@ -28,7 +26,7 @@
                 placeholder=""
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-success btn-color" type="submit">
                 Pesquisar
               </button>
             </form>
@@ -113,24 +111,44 @@
           consequat urna vitae odio finibus, sit amet tempus tortor maximus.
         </p>
         <div class="row gx-0">
-          <div class="col"><img src="images/img-tr.jpg" /></div>
-          <div class="col"><img src="images/img-tr.jpg" /></div>
-          <div class="col"><img src="images/img-tr.jpg" /></div>
-          <div class="col"><img src="images/img-tr.jpg" /></div>
+          <div class="col">
+            <div class="container">
+              <img src="images/img-tr.jpg" />
+              <div class="text-image">Imagem 1</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <img src="images/img-tr.jpg" />
+              <div class="text-image">Imagem 2</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <img src="images/img-tr.jpg" />
+              <div class="text-image">Imagem 3</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <img src="images/img-tr.jpg" />
+              <div class="text-image">Imagem 4</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div id="rodape-separador" class="container bg-white no-padding">
-        <hr />
+        <div class="container no-padding line-bottom"></div>
       </div>
       <div id="rodape" class="container margem no-padding">
         <div class="row qx-5">
           <div class="col">
             <div>
               <div>
-                <h4>Categorias</h4>
-                <hr />
+                <h4 style="margin-bottom: 0">Categorias</h4>
+                <div class="line-top"></div>
               </div>
               <a href="">Categoria 1</a>
               <hr />
@@ -143,8 +161,8 @@
           <div class="col">
             <div>
               <div>
-                <h4>Posts Recentes</h4>
-                <hr />
+                <h4 style="margin-bottom: 0">Posts Recentes</h4>
+                <div class="line-top"></div>
               </div>
               <a href="">Categoria 1</a>
               <hr />
@@ -157,8 +175,8 @@
           <div class="col">
             <div>
               <div>
-                <h4>Contatos</h4>
-                <hr />
+                <h4 style="margin-bottom: 0">Contatos</h4>
+                <div class="line-top"></div>
               </div>
               <a href="">Informação 1</a>
               <hr />
@@ -174,11 +192,12 @@
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
+      <div class="container no-padding line-top"></div>
+      <nav id="rodape-bot" class="navbar navbar-light bg-light margem">
+        <div class="navbar ms-auto">
           <a class="nav-link" href="#">Blog</a>
           <a class="nav-link" href="#">Suporte</a>
-          <a class="nav-link" href="#">Contato</a>
+          <a class="nav-link" href="#">Contatos</a>
         </div>
       </nav>
     </div>
