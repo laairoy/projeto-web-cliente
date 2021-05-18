@@ -51,10 +51,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
                 <a class="nav-link" href="#">Blog</a>
-                <a class="nav-link" href="#">Produtos</a>
-                <a class="nav-link" href="#">Contatos</a>
+                <a class="nav-link" href="produtos.html">Produtos</a>
+                <a class="nav-link" href="contato.html">Contatos</a>
+                <a class="nav-link active" href="carrinho.html">Carrinho</a>
               </div>
             </div>
           </div>
@@ -64,106 +67,60 @@
     </div>
     <!-- //cabecalho -->
     <div class="container">
-      <div id="conteudo" class="margem bg-white">
-        <div id="carouselControl" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="images/banner.png" />
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="images/banner3.png" />
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="images/banner2.png" />
+      <div class="margem bg-white">
+        <div class="row">
+          <!-- produtos -->
+          <div class="col-8 align-self-start mt-3">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-md-8" scope="col">produto</th>
+                  <th class="col-md-2 mx-auto" scope="col">qtd.</th>
+                  <th class="col-md-3 mx-auto" scope="col">preço</th>
+                </tr>
+              </thead>
+              <tbody id="carrinho-produtos">
+                <tr value="prodid" class="align-middle">
+                  <td>
+                    <div>
+                      <img class="w-25" src="images/produto1.jpeg ">
+                      <span class="title"> Tenis nike </span>
+                    </div> 
+                  </td>
+                  <td>
+                    <input class="d-block" type="number" min="1" value="1">
+                    <a class="d-block text-center" href="">remover</a>
+                  </td>
+                  <td>R$ 200,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //produtos -->
+          <!--resumo-->
+          <div class="col-4 align-self-end">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Resumo do Pedido</h5>
+                <p class="card-text">
+                <div class="row">
+                  <div class="col">
+                    Total
+                  </div>
+                  <div id="produto-total" class="col text-end">
+                    R$ 200,00
+                  </div>
+                </div>
+                </p>
+                <a href="#" class="btn btn-primary">Pagar</a>
+              </div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselControl"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselControl"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <!--//resumo-->
         </div>
       </div>
     </div>
-    <!-- //img banner -->
-    <div class="container">
-      <div id="noticias" class="container bg-white no-padding margem">
-        <div class="row gx-5">
-          <div class="col">
-            <img src="images/img1.png" />
-            <h4>Lorem Ipsun</h4>
-            <p>
-              Lorem ipsum lor sit amet, consectetur adipiscing elit. Curabitur
-              consequat urna vitae odio finibus, sit amet tempus tortor maximus.
-            </p>
-          </div>
-          <div class="col">
-            <img src="images/img2.png" />
-            <h4>Lorem Ipsun</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              consequat urna vitae odio finibus, sit amet tempus tortor maximus.
-            </p>
-          </div>
-          <div class="col">
-            <img src="images/img3.png" />
-            <h4>Lorem Ipsun</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              consequat urna vitae odio finibus, sit amet tempus tortor maximus.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div id="galeria" class="container no-padding bg-white margem">
-        <h2>Trabalhos Recentes</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-          consequat urna vitae odio finibus, sit amet tempus tortor maximus.
-        </p>
-        <div class="row gx-0">
-          <div class="col">
-            <div class="container">
-              <img src="images/img-tr.jpg" />
-              <div class="text-image">Imagem 1</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="container">
-              <img src="images/img-tr.jpg" />
-              <div class="text-image">Imagem 2</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="container">
-              <img src="images/img-tr.jpg" />
-              <div class="text-image">Imagem 3</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="container">
-              <img src="images/img-tr.jpg" />
-              <div class="text-image">Imagem 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- //img carrinho -->
     <div class="container">
       <div id="rodape-separador" class="container bg-white no-padding">
         <div class="container no-padding line-bottom"></div>
@@ -232,5 +189,48 @@
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var total = 0;
+      function getKeyByIndex(index){
+        return localStorage.key(index);
+      }
+      function getDataByIndex(index){
+        return JSON.parse(localStorage.getItem(getKeyByIndex(index)));
+      }
+      function carregarCarrinho(){
+        var carrinho = document.getElementById("carrinho-produtos");
+        var data = "";
+        total = 0;
+        for(var i=0; i<localStorage.length; i++){
+          var produto = getDataByIndex(i);
+          total += produto.preco * produto.qtd;
+          data +=  "<tr value='prodid' class='align-middle'><td><div><img class='w-25' src='"+produto.img +"'><span class='title'>"+ produto.nome +"</span></div></td><td><input class='d-block' type='number' min='1' value='"+produto.qtd +"' onchange='atualizarProduto("+i+", this.value)' style='width: 3em;'><div class=''><a onclick='removerProduto("+i+")' href=''>remover</a></div></td><td>R$ " + produto.preco * produto.qtd + "</td></tr>"
+        }
+        carrinho.innerHTML = data;
+        document.getElementById("produto-total").innerHTML = "R$ "+total;
+      }
+      function removerProduto(id){
+        localStorage.removeItem(getKeyByIndex(id));
+        carregarCarrinho();
+      }
+      function atualizarProduto(id, value){
+        if(/^([0-9]+)$/.test(value)){
+          var produto = getDataByIndex(id);
+          produto.qtd = value;
+          localStorage.setItem(getKeyByIndex(id), JSON.stringify(produto));
+        }
+        carregarCarrinho();
+        //atulizarTotal();
+      }
+      function atulizarTotal(){
+        total = 0;
+        for(var i=0;i<localStorage.length;i++) {
+          produto = getDataByIndex(i);
+          total += produto.preco * produto.qtd; 
+        }
+        document.getElementById("produto-total").innerHTML = "R$ "+total;
+      }
+      carregarCarrinho();
+    </script>
   </body>
 </html>
