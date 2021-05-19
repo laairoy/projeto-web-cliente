@@ -204,10 +204,10 @@
         for(var i=0; i<localStorage.length; i++){
           var produto = getDataByIndex(i);
           total += produto.preco * produto.qtd;
-          data +=  "<tr value='prodid' class='align-middle'><td><div><img class='w-25' src='"+produto.img +"'><span>"+ produto.nome +"</span></div></td><td><input class='d-block' type='number' min='1' value='"+produto.qtd +"' onchange='atualizarProduto("+i+", this.value)' style='width: 3em;'><div class=''><a onclick='removerProduto("+i+")' href=''>remover</a></div></td><td>R$ " + produto.preco * produto.qtd + "</td></tr>"
+          data +=  "<tr value='prodid' class='align-middle'><td><div><img class='w-25' src='"+produto.img +"'><span>"+ produto.nome +"</span></div></td><td><input class='d-block' type='number' min='1' value='"+produto.qtd +"' onchange='atualizarProduto("+i+", this.value)' style='width: 3em;'><div class=''><a onclick='removerProduto("+i+")' href=''>remover</a></div></td><td id='valor"+i+"'>" + formatarValor(produto.preco * produto.qtd) + "</td></tr>"
         }
         carrinho.innerHTML = data;
-        document.getElementById("produto-total").innerHTML = "R$ "+total;
+        document.getElementById("produto-total").innerHTML = formatarValor(total);
       }
       function removerProduto(id){
         localStorage.removeItem(getKeyByIndex(id));
@@ -218,9 +218,11 @@
           var produto = getDataByIndex(id);
           produto.qtd = value;
           localStorage.setItem(getKeyByIndex(id), JSON.stringify(produto));
+          document.getElementById("valor"+id).innerHTML = formatarValor(produto.preco * produto.qtd);
+          atulizarTotal();
+        } else{
+          carregarCarrinho();
         }
-        carregarCarrinho();
-        //atulizarTotal();
       }
       function atulizarTotal(){
         total = 0;
@@ -228,7 +230,11 @@
           produto = getDataByIndex(i);
           total += produto.preco * produto.qtd; 
         }
-        document.getElementById("produto-total").innerHTML = "R$ "+total;
+        document.getElementById("produto-total").innerHTML = formatarValor(total);
+      }
+      function formatarValor(num){
+        var nString= num.toString().split(".");
+        return "R$ " + nString[0] + "." + nString[1].substring(0,2);
       }
       carregarCarrinho();
     </script>
