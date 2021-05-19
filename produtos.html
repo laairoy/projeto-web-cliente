@@ -116,7 +116,7 @@
                   id="modal-btn" 
                   value="123" 
                   type="button" 
-                  class="btn btn-primary"
+                  class="btn btn-success btn-color"
                   onclick="comprar(this.value)" 
                   data-bs-dismiss="modal">Comprar
                 </button>
@@ -222,31 +222,31 @@
       var listProd = [];
       listProd.push({
         id: "prod1",
-        nome: "Tenis nike 1",
+        nome: "Tênis Nike Revolution 5",
         img: "images/produto1.jpeg",
-        preco: 220.0,
-        info: "ola mundo",
+        preco: 120.99,
+        info: "Com ótimo amortecimento em espuma, o Tênis Nike Masculino Revolution 5 é ideal para os corredores que buscam leveza e conforto. Confeccionado em material respirável, esse tênis para correr possui reforço no calcanhar para proteger contra possíveis torções e fechamento dinâmico, garantindo um ajuste personalizado. Aposte na Nike para te acompanhar nos seus desafios dentro do esporte!",
       });
       listProd.push({
         id: "prod2",
-        nome: "Tenis nike 2",
+        nome: "Tênis Nike Downshifter 10 ",
         img: "images/produto2.jpeg",
-        preco: 220.0,
-        info: "ola mundo",
+        preco: 299.99,
+        info: "O Tênis Nike Masculino Downshifter 10 traz amortecimento e suporte atualizados, para garantir uma corrida estável e confortável. Esse tênis de corrida é confeccionado em material respirável, cabedal em couro sintético, com mesh no calcanhar, proporciona suporte e circulação de ar, forro acolchoado, entressola em espuma de EVA flexível, garantindo a sensação de amortecimento responsivo durante o treino e solado em borracha para tração durável. ",
       });
       listProd.push({
         id: "prod3",
-        nome: "Tenis nike 3",
+        nome: "Tênis Adidas Runfalcon 2.0",
         img: "images/produto3.jpeg",
-        preco: 220.0,
-        info: "ola mundo",
+        preco: 179.99,
+        info: "Com cabedal em mesh e couro, o Tênis Adidas Runfalcon 2.0 Masculino é a escolha certa para durabilidade e conforto nos seus treinos diários.",
       });
       listProd.push({
         id: "prod4",
-        nome: "Tenis nike 4",
+        nome: "Tênis Adidas Ultimashow",
         img: "images/produto4.jpeg",
-        preco: 220.0,
-        info: "ola mundo",
+        preco: 99.99,
+        info: "Saia para correr ou caminhar com o Tênis Adidas Ultimashow Masculino! É confeccionado em amterial que proporciona circulação de ar e frescor para os pés durante duas atividades.",
       });
 
       var div = document.getElementById("listaProdutos");
@@ -257,7 +257,7 @@
           listProd[i].img +
           "' /><div class='card-body'><h5 class='card-title'>" +
           listProd[i].nome +
-          "</h5><a id='"+listProd[i].id +"'class='btn btn-primary' data-bs-toggle='modal'data-bs-target='#prodModal' onclick='openModal(this.id)'>Mais Informações</a></div></div></div><!--//item-->";
+          "</h5><a id='"+listProd[i].id +"'class='btn btn-success btn-color' data-bs-toggle='modal'data-bs-target='#prodModal' onclick='openModal(this.id)'>Mais Informações</a></div></div></div><!--//item-->";
       }
       div.innerHTML = data;
       function openModal(id){
@@ -268,7 +268,7 @@
               var botao = document.getElementById("modal-btn").value = prodData.id;
               document.getElementById("modal-img").src = prodData.img;
               titulo.innerHTML = prodData.nome;
-              descricao.innerHTML = prodData.info;
+              descricao.innerHTML = "<h2 class='pb-3'>R$ "+prodData.preco+"</h2>" + prodData.info;
       }
       function comprar(id){
         console.log(id);

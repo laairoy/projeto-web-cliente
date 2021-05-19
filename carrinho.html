@@ -98,7 +98,7 @@
           </div>
           <!-- //produtos -->
           <!--resumo-->
-          <div class="col-4 align-self-end">
+          <div class="col-4 pt-3">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Resumo do Pedido</h5>
@@ -112,7 +112,7 @@
                   </div>
                 </div>
                 </p>
-                <a href="#" class="btn btn-primary">Pagar</a>
+                <a href="#" class="btn btn-success btn-color w-100">Continuar</a>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@
         for(var i=0; i<localStorage.length; i++){
           var produto = getDataByIndex(i);
           total += produto.preco * produto.qtd;
-          data +=  "<tr value='prodid' class='align-middle'><td><div><img class='w-25' src='"+produto.img +"'><span class='title'>"+ produto.nome +"</span></div></td><td><input class='d-block' type='number' min='1' value='"+produto.qtd +"' onchange='atualizarProduto("+i+", this.value)' style='width: 3em;'><div class=''><a onclick='removerProduto("+i+")' href=''>remover</a></div></td><td>R$ " + produto.preco * produto.qtd + "</td></tr>"
+          data +=  "<tr value='prodid' class='align-middle'><td><div><img class='w-25' src='"+produto.img +"'><span>"+ produto.nome +"</span></div></td><td><input class='d-block' type='number' min='1' value='"+produto.qtd +"' onchange='atualizarProduto("+i+", this.value)' style='width: 3em;'><div class=''><a onclick='removerProduto("+i+")' href=''>remover</a></div></td><td>R$ " + produto.preco * produto.qtd + "</td></tr>"
         }
         carrinho.innerHTML = data;
         document.getElementById("produto-total").innerHTML = "R$ "+total;
